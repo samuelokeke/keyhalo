@@ -6,7 +6,7 @@
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   // useEffect(() => {
   //   const lenis = new Lenis({
-  //     syncTouch: true, // Ensures touch works properly
+  //     syncTouch: false, // Ensures touch works properly
   //     autoRaf: true, // Enable auto requestAnimationFrame
   //   });
 
