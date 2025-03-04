@@ -205,10 +205,10 @@ const Footer = () => {
 
       <div className="bg-primary text-primary-foreground py-2">
         <div className="w-full lg:max-w-7xl h-full mx-auto px-6 lg:px-4">
-          <div className="flex lg:flex-row flex-col justify-between items-center gap-4">
+          <div className="flex lg:flex-row flex-col justify-between items-center gap-x-4 gap-y-2">
             <p className="text-sm font-medium">&copy; {currentYear} Key Halo. All Rights Reserved.</p>
 
-            <ul className="flex flex-wrap items-center gap-2 justify-center overflow-x-auto whitespace-nowrap text-muted font-medium">
+            <ul className="flex flex-wrap items-center gap-1.5 lg:gap-2 justify-center overflow-x-auto whitespace-nowrap text-muted font-medium">
               <Link href="" className="text-xs hover:text-accent">
                 Privacy Policy
               </Link>

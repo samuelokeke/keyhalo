@@ -27,12 +27,12 @@ const Appbar = () => {
       <div className="bg-primary text-primary-foreground py-1.5">
         <div className="w-full lg:max-w-7xl mx-auto px-6 lg:px-4">
           <div className="flex justify-center items-center">
-            <div className="w-fit flex flex-wrap items-center justify-center gap-2">
-              <p className="text-sm font-medium">
+            <div className="w-fit flex flex-wrap items-center justify-center gap-1 lg:gap-2">
+              <p className="text-xs lg:text-sm font-medium">
                 Call us: <a href="tel:+234-123-456-7890">+234-123-456-7890</a>
               </p>
               <span className="hidden lg:inline">|</span>
-              <p className="text-sm font-medium">
+              <p className="text-xs lg:text-sm font-medium">
                 Email: <a href="mailto:info@keyhalo.com">info@keyhalo.com</a>
               </p>
             </div>
