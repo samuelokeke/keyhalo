@@ -1,0 +1,10 @@
+.list-counter {
+  counter-reset: counter;
+
+  & :is(li, ol)::before {
+    counter-increment: counter;
+    content: counter(counter) ".";
+    display: grid;
+    place-content: center;
+  }
+}

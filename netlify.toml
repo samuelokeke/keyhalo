@@ -1,0 +1,36 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[functions]
+  directory = ".netlify/functions"
+
+[[edge_functions]]
+  function = "api"
+  path = "/api/*"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200  
+  force = true
+
+[[headers]]  
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[headers]]
+	for = "/*.jpg"
+	[headers.values]
+	Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+	for = "/*.png"
+	[headers.values]
+	Cache-Control = "public, max-age=31536000, immutable"

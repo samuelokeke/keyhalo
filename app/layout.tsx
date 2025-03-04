@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Montserrat, Lato } from "next/font/google";
+import "./globals.scss";
+import Appbar from "@/components/shared/Appbar";
+import Footer from "@/components/shared/Footer";
+import LenisProvider from "@/components/shared/LenisProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  display: "swap",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lato = Lato({
+  variable: "--font-lato",
+  weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
 });
 
@@ -24,10 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${lato.variable} ${montserrat.className} antialiased`}>
+        <LenisProvider>
+          <Appbar />
+
+          {children}
+
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
