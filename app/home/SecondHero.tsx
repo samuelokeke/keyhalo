@@ -24,7 +24,7 @@ const SecondHero = () => {
   };
 
   return (
-    <section className="bg-primary pt-20">
+    <section className="bg-primary py-20 lg:pt-20">
       <div className="w-full lg:max-w-7xl mx-auto px-6 lg:px-4">
         <div className="lg:-translate-y-40 translate-y-0 bg-background border-2 border-primary rounded-3xl shadow-lg px-4 py-8 lg:p-8">
           <motion.div
