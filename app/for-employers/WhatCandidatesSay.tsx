@@ -6,9 +6,14 @@ import React, { useState } from "react";
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const WhatCandidatesSay = () => {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState<number | undefined>(0);
 
   const handleCollapse = (index: number) => {
+    if (selected === index) {
+      setSelected(undefined);
+      return;
+    }
+
     setSelected(index);
   };
 
@@ -31,7 +36,7 @@ const WhatCandidatesSay = () => {
               <div className="h-20 flex items-center justify-between gap-x-8 px-4">
                 <p>What do you like to know about KeyHalo {i + 1}</p>
 
-                <ChevronDownCircle className="stroke-muted-foreground" />
+                <ChevronDownCircle className="shrink-0 stroke-muted-foreground" />
               </div>
 
               <div className="text-wrap group-data-[state=closed]:opacity-0 group-data-[state=open]:opacity-100 px-4 pb-4">

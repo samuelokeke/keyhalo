@@ -19,7 +19,7 @@ const WhatClientSays = () => {
           <p className="text-muted-foreground text-sm font-medium">What peoples have to tell about our values</p>
         </div>
 
-        <ul className="flex items-startx border border-muted-foreground font-medium rounded">
+        <ul className="flex border border-muted-foreground font-medium rounded overflow-x-auto">
           {items.map((_, i) => (
             <Fragment key={i}>
               <li
