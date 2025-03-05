@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Hero";
 import Quotes from "./Quotes";
-import WhatClientSays from "./WhatClientSays";
+import WhatClientsSay from "./WhatClientsSay";
 import WhatCandidatesSay from "./WhatCandidatesSay";
 
 const ForBusinessPage = () => {
@@ -11,7 +11,7 @@ const ForBusinessPage = () => {
 
       <Quotes />
 
-      <WhatClientSays />
+      <WhatClientsSay />
 
       <WhatCandidatesSay />
     </div>

@@ -19,9 +19,9 @@ const Testimonials = () => {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="gridx columns-3 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 [&>div]:mb-4">
             {testimonies.map((testimony, i) => (
-              <div key={i} className="px-4 py-6 border rounded">
+              <div key={i} className="px-4 py-6 border rounded mb-4x">
                 <h2 className="text-lg font-bold mb-6">{testimony.title}</h2>
 
                 <p className="text-sm font-medium">{testimony.content}</p>
