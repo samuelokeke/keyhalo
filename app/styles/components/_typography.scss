@@ -6,8 +6,16 @@ $typography: (
 
 .writing-mode {
   &-tb {
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    writing-mode: vertical-lr;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &-tb {
+      -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+    }
   }
 }

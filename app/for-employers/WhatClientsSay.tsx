@@ -1,7 +1,7 @@
 "use client";
 
 import { Minus, Plus } from "lucide-react";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -20,28 +20,28 @@ const WhatClientsSay = () => {
           <p className="text-muted-foreground text-sm font-medium">What peoples have to tell about our values</p>
         </div>
 
-        <ul className="flex border border-muted-foreground font-medium rounded overflow-x-auto">
-          {items.map((_, i) => (
+        <ul className="flex flex-col lg:flex-row border border-muted-foreground font-medium rounded overflow-auto">
+          {items.map((item, i) => (
             <li
-              key={i}
+              key={item}
               data-state={selected === i ? "open" : "closed"}
-              className="group grid data-[state=closed]:grid-cols-[56px_0fr] data-[state=open]:grid-cols-[56px_1fr] transition-all ease-in duration-300 not-last:border-r border-muted-foreground"
-              onClick={() => handleCollapse(i)}
+              className="group grid lg:data-[state=closed]:grid-cols-[56px_0fr] lg:data-[state=open]:grid-cols-[56px_1fr] data-[state=closed]:grid-rows-[56px_0fr] lg:data-[state=closed]:grid-rows-1 data-[state=open]:grid-rows-[56px_1fr] lg:data-[state=open]:grid-rows-1 transition-all ease-in duration-300 not-last:border-b lg:not-last:border-b-0 lg:not-last:border-r border-muted-foreground"
             >
-              <div
+              <button
                 data-state={selected === i ? "open" : "closed"}
-                className="flex items-center gap-4 data-[state=open]:bg-muted/50 writing-mode-tb px-4 py-6 cursor-pointer"
+                onClick={() => handleCollapse(i)}
+                className="lg:w-[56px] h-full flex items-center gap-4 data-[state=open]:bg-muted/50 writing-mode-tb px-4 py-6 lg:py-0 cursor-pointer text-start"
               >
                 {selected === i ? <Minus /> : <Plus />}
                 <p>What do you like to know about KeyHalo {i + 1}</p>
-              </div>
+              </button>
 
-              <div className="overflow-hidden group-data-[state=closed]:-translate-y-96 group-data-[state=open]:translate-y-0 delay-100 duration-500">
-                <div className="text-sm text-wrap p-4">
+              <div className="overflow-hidden group-data-[state=closed]:-translate-y-10 group-data-[state=open]:translate-y-0 delay-100 duration-500">
+                <p className="text-sm text-wrap p-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quidem deserunt temporibus error
                   dolorem corrupti debitis nostrum earum optio quasi veniam animi odit molestiae quo maxime, reiciendis
                   consequatur corporis. Iusto.
-                </div>
+                </p>
               </div>
             </li>
           ))}
@@ -52,36 +52,3 @@ const WhatClientsSay = () => {
 };
 
 export default WhatClientsSay;
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const ListItem = ({
-  handleCollapse,
-  i,
-  selected,
-}: {
-  handleCollapse: (i: number) => void;
-  i: number;
-  selected: number;
-}) => {
-  return (
-    <Fragment>
-      <li
-        className="writing-mode-tb not-last:border-r nth-last-[2]:border-r-0 border-muted-foreground px-4 py-6 cursor-pointer"
-        onClick={() => handleCollapse(i)}
-      >
-        <p>What do you like to know about KeyHalo {i + 1}</p>
-      </li>
-
-      <li
-        className="data-[state=open]:max-w-full data-[state=open]:opacity-100 data-[state=open]:visible data-[state=closed]:max-w-0 data-[state=closed]:invisible data-[state=closed]:opacity-0 transition-all duration-300 overflow-hidden data-[state=open]:not-last:border-r"
-        data-state={selected === i ? "open" : "closed"}
-      >
-        <div className="text-wrap p-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quidem deserunt temporibus error dolorem
-          corrupti debitis nostrum earum optio quasi veniam animi odit molestiae quo maxime, reiciendis consequatur
-          corporis. Iusto.
-        </div>
-      </li>
-    </Fragment>
-  );
-};
