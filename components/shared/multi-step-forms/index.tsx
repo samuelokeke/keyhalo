@@ -9,8 +9,6 @@ import AdvancedForm from "./AdvancedForm";
 const MultiStepForm = () => {
   const { currentStep } = useFormStore();
 
-  console.log(currentStep, 'currentStep')
-
   return (
     <div className="">
       {currentStep === 0 && <PersonalForm />}

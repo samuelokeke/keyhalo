@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -27,14 +28,16 @@ const Hero = () => {
                 </p>
               </div>
 
-              <Button
-                variant="destructive"
-                size="xl"
-                className="text-lg font-semibold rounded-3xl hover:bg-destructive"
-              >
-                Request a Consultation
-                <MoveRight className="size-8" />
-              </Button>
+              <Link href="/consultation">
+                <Button
+                  variant="destructive"
+                  size="xl"
+                  className="text-lg font-semibold rounded-3xl hover:bg-destructive"
+                >
+                  Request a Consultation
+                  <MoveRight className="size-8" />
+                </Button>
+              </Link>
             </div>
 
             <div className="hidden">

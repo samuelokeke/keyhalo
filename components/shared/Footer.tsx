@@ -142,25 +142,25 @@ const Footer = () => {
                 <h2 className="text-lg font-bold mb-6">Company</h2>
 
                 <ul className="flex flex-col gap-2 text-sm">
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/about-us" className="text-muted-foreground hover:text-accent">
                     About us
                   </Link>
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/contact-us" className="text-muted-foreground hover:text-accent">
                     Contact us
                   </Link>
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/blog" className="text-muted-foreground hover:text-accent">
                     Blog
                   </Link>
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/privacy-policy" className="text-muted-foreground hover:text-accent">
                     Privacy Policy
                   </Link>
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/faqs" className="text-muted-foreground hover:text-accent">
                     FAQs
                   </Link>
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/testimonials" className="text-muted-foreground hover:text-accent">
                     Testimonials
                   </Link>
-                  <Link href="" className="text-muted-foreground hover:text-accent">
+                  <Link href="/terms-of-use" className="text-muted-foreground hover:text-accent">
                     Terms of use
                   </Link>
                 </ul>
