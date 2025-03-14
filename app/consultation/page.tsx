@@ -31,7 +31,7 @@ const ConsultationBanner = () => {
     <div className="h-96 bg-primary bg-radial-[circle_at_50%] from-primary-50 to-primary text-accent py-12">
       <div className="w-full h-full lg:max-w-7xl mx-auto px-6 lg:px-4">
         <div className="w-full mx-auto lg:w-1/2 h-full flex flex-col items-center justify-center">
-          <h1 className="text-5xl font-extrabold text-center mb-6">Consultation</h1>
+          <h1 className="text-5xl font-bold text-center mb-6">Consultation</h1>
 
           <p className="text-muted/70 text-base text-center font-medium">
             Schedule a consultation with our expert team to discuss your staffing needs and discover tailored solutions
