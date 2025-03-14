@@ -51,7 +51,7 @@ export default function BasicForm() {
             <FormItem>
               <FormLabel>Company</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your company" {...field} />
+                <Input className="h-10" placeholder="Enter your company" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -65,7 +65,7 @@ export default function BasicForm() {
             <FormItem>
               <FormLabel>Job title</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your job title" {...field} />
+                <Input className="h-10" placeholder="Enter your job title" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

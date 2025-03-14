@@ -3,11 +3,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { schema } from "./schema";
+import { useFormStore } from "./store";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { useFormStore } from "./store";
-import { schema } from "./schema";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // Pick only the fields we need from the main schema
@@ -51,7 +51,7 @@ export default function AdvancedForm() {
             <FormItem>
               <FormLabel>Job Location</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your name" {...field} />
+                <Input className="h-10" placeholder="Enter your name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -65,7 +65,7 @@ export default function AdvancedForm() {
             <FormItem>
               <FormLabel>Job Salary</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your Job Salary" {...field} prefix="₩" />
+                <Input className="h-10" placeholder="Enter your Job Salary" {...field} prefix="₩" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,7 +80,7 @@ export default function AdvancedForm() {
               <FormLabel>Job type</FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger className="w-full h-10">
                     <SelectValue placeholder="Select a job type" />
                   </SelectTrigger>
                   <SelectContent>
@@ -109,7 +109,7 @@ export default function AdvancedForm() {
               <FormLabel>Job industry</FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger className="w-full h-10">
                     <SelectValue placeholder="Select a job industry" />
                   </SelectTrigger>
                   <SelectContent>

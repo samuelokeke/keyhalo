@@ -13,19 +13,19 @@ const WhatClientsSay = () => {
   };
 
   return (
-    <section className="bg-background py-20">
+    <section className="bg-muted/40 py-20">
       <div className="w-full lg:max-w-7xl mx-auto px-6 lg:px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl text-accent font-extrabold mb-2">What Our Clients Say About Us </h2>
-          <p className="text-muted-foreground text-sm font-medium">What peoples have to tell about our values</p>
+          <h2 className="text-3xl text-primary-50 font-extrabold mb-2">What Our Clients Say About Us </h2>
+          <p className="text-muted-foreground text-base font-medium">What peoples have to tell about our values</p>
         </div>
 
-        <ul className="flex flex-col lg:flex-row border border-muted-foreground font-medium rounded overflow-auto">
+        <ul className="flex flex-col lg:flex-row bg-background border border-muted-foreground/40 font-medium rounded overflow-auto">
           {items.map((item, i) => (
             <li
               key={item}
               data-state={selected === i ? "open" : "closed"}
-              className="group grid lg:data-[state=closed]:grid-cols-[56px_0fr] lg:data-[state=open]:grid-cols-[56px_1fr] data-[state=closed]:grid-rows-[56px_0fr] lg:data-[state=closed]:grid-rows-1 data-[state=open]:grid-rows-[56px_1fr] lg:data-[state=open]:grid-rows-1 transition-all ease-in duration-300 not-last:border-b lg:not-last:border-b-0 lg:not-last:border-r border-muted-foreground"
+              className="group grid lg:data-[state=closed]:grid-cols-[56px_0fr] lg:data-[state=open]:grid-cols-[56px_1fr] data-[state=closed]:grid-rows-[56px_0fr] lg:data-[state=closed]:grid-rows-1 data-[state=open]:grid-rows-[56px_1fr] lg:data-[state=open]:grid-rows-1 transition-all ease-in duration-300 not-last:border-b lg:not-last:border-b-0 lg:not-last:border-r border-muted-foreground/40"
             >
               <button
                 data-state={selected === i ? "open" : "closed"}

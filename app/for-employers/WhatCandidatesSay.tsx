@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDownCircle } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -18,25 +18,29 @@ const WhatCandidatesSay = () => {
   };
 
   return (
-    <section className="bg-background py-20">
+    <section className="bg-primary text-muted py-20">
       <div className="w-full lg:max-w-7xl mx-auto px-6 lg:px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl text-accent font-extrabold mb-2">What Our Candidates Say About Us </h2>
-          <p className="text-muted-foreground text-sm font-medium">What candidates have to tell about our values</p>
+          <h2 className="text-3xl text-secondary font-extrabold mb-2">What Our Candidates Say About Us </h2>
+          <p className="text-muted text-base font-medium">What candidates have to tell about our values</p>
         </div>
 
-        <ul className="flex flex-col border border-muted-foreground/40 font-medium rounded">
+        <ul className="flex flex-col border border-secondary/40 font-medium rounded">
           {items.map((item, i) => (
             <li
               key={item}
               data-state={selected === i ? "open" : "closed"}
-              className="group not-last:border-b data-[state=open]:max-h-screen data-[state=closed]:max-h-20 transition-all ease-in-out duration-0 overflow-hidden border-muted-foreground/40"
+              className="group not-last:border-b data-[state=open]:max-h-screen data-[state=closed]:max-h-20 transition-all ease-in-out duration-0 overflow-hidden border-secondary/40"
             >
               <button onClick={() => handleCollapse(i)} className="w-full h-20 text-left">
                 <div className="h-full flex items-center justify-between gap-x-8 px-4">
                   <p>What do you like to know about KeyHalo {i + 1}</p>
 
-                  <ChevronDownCircle className="shrink-0 stroke-muted-foreground" />
+                  {selected === i ? (
+                    <ChevronUp className="shrink-0 stroke-muted-foreground" />
+                  ) : (
+                    <ChevronDown className="shrink-0 stroke-muted-foreground" />
+                  )}
                 </div>
               </button>
 

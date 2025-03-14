@@ -8,8 +8,8 @@ const ConsultationForm = () => {
     <section className="bg-background py-12">
       <div className="w-full h-full lg:max-w-7xl mx-auto px-6 lg:px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-2xl font-bold mb-2">Consultation Form</h2>
-          <p className="text-muted-foreground text-sm font-medium">
+          <h2 className="text-3xl text-primary-50 font-extrabold mb-2">Consultation Form</h2>
+          <p className="text-muted-foreground text-base font-medium">
             Please fill out the form below to schedule a consultation with us.
           </p>
         </div>

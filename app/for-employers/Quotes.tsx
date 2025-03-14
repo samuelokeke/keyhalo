@@ -7,7 +7,7 @@ const Quotes = () => {
   return (
     <section className="bg-background py-20">
       <div className="w-full lg:max-w-7xl mx-auto px-6 lg:px-4">
-        <Accordion type="single" collapsible className="w-full mb-12">
+        <Accordion type="single" collapsible className="w-full mb-20">
           <AccordionItem
             value="item 1"
             className="bg-background text-foreground border not-last:border-b-0 last:border-b border-muted-foreground first:rounded-t last:rounded-b px-6"
@@ -76,7 +76,7 @@ const Quotes = () => {
           <h1>Is Your Company Struggling with Talent Acquisition and/or Retention? If So, You&apos;re Not Alone.</h1>
         </div>
 
-        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-10 mb-12">
+        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-10 mb-20">
           <div className="col-span-12 lg:col-span-8 flex flex-col gap-6">
             <div className="border border-secondary hover:border-primary p-4 lg:p-6 rounded">
               <h1 className="text-6xl text-muted font-black mb-2">01</h1>
