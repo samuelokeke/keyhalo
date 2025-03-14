@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Quotes from "./Quotes";
 import WhatClientsSay from "./WhatClientsSay";
 import WhatCandidatesSay from "./WhatCandidatesSay";
+import ConsultationForm from "./ConsultationForm";
 
 const ForBusinessPage = () => {
   return (
@@ -14,6 +15,8 @@ const ForBusinessPage = () => {
       <WhatClientsSay />
 
       <WhatCandidatesSay />
+
+      <ConsultationForm />
     </div>
   );
 };

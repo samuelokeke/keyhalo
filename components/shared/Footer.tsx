@@ -1,16 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import X from "../icons/X";
+import TikTok from "../icons/TikTok";
 import Facebook from "../icons/Facebook";
 import LinkedIn from "../icons/LinkedIn";
+import AppStore from "../icons/AppStore";
 import Instagram from "../icons/Instagram";
-import X from "../icons/X";
-import TikTok from "../icons/Tiktok";
 import { ArrowUp, MailIcon, MoveRight, PhoneCall } from "lucide-react";
-import { motion } from "motion/react";
-import Image from "next/image";
-import Appstore from "../icons/Appstore";
 
 const Footer = () => {
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -117,13 +117,19 @@ const Footer = () => {
               </p>
 
               <div className="flex flex-wrap lg:flex-nowrap items-center gap-4">
-                <a href="" className="bg-black text-primary-foreground flex items-center gap-2 px-4 py-2 rounded">
-                  <Appstore className="w-6 h-6 fill-white" />
+                <a
+                  href="https://"
+                  className="bg-black text-primary-foreground flex items-center gap-2 px-4 py-2 rounded"
+                >
+                  <AppStore className="w-6 h-6 fill-white" />
 
                   <p className="font-medium">App store</p>
                 </a>
 
-                <a href="" className="bg-black text-primary-foreground flex items-center gap-2 px-4 py-2 rounded">
+                <a
+                  href="https://"
+                  className="bg-black text-primary-foreground flex items-center gap-2 px-4 py-2 rounded"
+                >
                   <Image src="icons/play-store.svg" width={24} height={24} alt="play store" />
 
                   <p className="font-medium">Play store</p>
@@ -195,7 +201,9 @@ const Footer = () => {
                     className="px-4 py-2 border lg:border-r-0 border-accent focus-visible:outline-none rounded lg:rounded-e-none"
                   />
 
-                  <button className="bg-accent text-accent-foreground px-4 py-2 rounded lg:rounded-s-none">Subscribe</button>
+                  <button className="bg-accent text-accent-foreground px-4 py-2 rounded lg:rounded-s-none">
+                    Subscribe
+                  </button>
                 </div>
               </div>
             </div>

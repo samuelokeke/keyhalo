@@ -31,7 +31,7 @@ const ServiceTabs = () => {
                 "text-muted-foreground transition-all duration-200 font-medium px-4 lg:px-8 py-2 rounded-4xl cursor-pointer max-w-48 text-ellipsis whitespace-nowrap overflow-hidden"
               )}
             >
-              For Employers recrrui
+              For Employers
             </button>
 
             <button

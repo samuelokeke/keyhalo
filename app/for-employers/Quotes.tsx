@@ -125,11 +125,11 @@ const Quotes = () => {
               className="bg-background text-foreground border not-last:border-b-0 last:border-b border-muted-foreground first:rounded-t last:rounded-b px-6"
             >
               <AccordionTrigger className="text-base font-semibold hover:no-underline [&>svg]:size-5">
-                Read the full Brief Case Study → [Unlock how KeyHalo Helped Engineer This Turnaround in Five Months from
-                Start]
+                Read the full Brief Case Study →
               </AccordionTrigger>
               <AccordionContent className="text-sm font-medium leading-6">
-                Real Employers. Real Success.
+                [Unlock how KeyHalo Helped Engineer This Turnaround in Five Months from Start]
+                <p>Real Employers. Real Success.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -137,10 +137,12 @@ const Quotes = () => {
               className="bg-background text-foreground border not-last:border-b-0 last:border-b border-muted-foreground first:rounded-t last:rounded-b px-6"
             >
               <AccordionTrigger className="text-base font-semibold hover:no-underline [&>svg]:size-5">
-                Want more proof? Read Brief Testimonials from Other Clients & Candidates →
+                Want more proof?
               </AccordionTrigger>
               <AccordionContent className="text-sm font-medium leading-6">
                 <div className="flex flex-col gap-4">
+                  <h3 className="text-lg font-bold mb-3">Read Brief Testimonials from Other Clients & Candidates →</h3>
+
                   <p>
                     How a Failing Last-Place $35M Subsidiary Became a High-Performing, Profitable Operation—Consistently
                     Ranking #1 or #2 Among 13 Sister Companies in Its U.S. Operations Group
